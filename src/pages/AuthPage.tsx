@@ -53,9 +53,9 @@ export function AuthPage() {
     }
 
     return (
-        <main>
-            <header className="text-4xl font-bold">Sign In</header>
-            <form onSubmit={handleSubmit}>
+        <main className="h-dvh grid place-items-center align-middle">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-1 border-2 p-2">
+                <header className="text-4xl font-bold">Sign In</header>
                 <label>Email:
                     <input
                         type="email"
@@ -64,6 +64,7 @@ export function AuthPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         disabled={isSubmitting}
+                        className="bg-cyan-500"
                     />
                 </label>
 
@@ -75,12 +76,13 @@ export function AuthPage() {
                         value={formData.password}
                         onChange={handleInputChange}
                         disabled={isSubmitting}
+                        className="bg-cyan-500"a
                     />
                 </label>
 
                 <output>{status}</output>
 
-                <button type="submit" disabled={isSubmitting}>Sign In</button>
+                <button type="submit" disabled={isSubmitting} className="bg-gray-400">Sign In</button>
             </form>
         </main>
     )
