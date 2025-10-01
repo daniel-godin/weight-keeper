@@ -28,3 +28,5 @@ public
 dist
 src/services/firebase/firebaseConfig.ts
 .firebase
+.env.development
+.env.production
